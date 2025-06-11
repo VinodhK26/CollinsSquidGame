@@ -1,4 +1,4 @@
-using Npgsql;
+﻿using Npgsql;
 using Microsoft.Extensions.Configuration;
 using Dapper;
 public class DbService
@@ -72,7 +72,12 @@ public class DbService
         try
         {
             using var conn = new NpgsqlConnection(_connectionString);
-            string column = $"istask{taskNumber}completed";
+            string column = $"istask{taskNumber}completed"; // Must match exactly
+
+            // Verify column name is safe
+            if (taskNumber is < 1 or > 4)
+                throw new ArgumentException("Invalid task number");
+
             string sql = $"UPDATE leaderboard SET {column} = TRUE WHERE teamid = @TeamId";
             await conn.ExecuteAsync(sql, new { TeamId = teamId });
         }
