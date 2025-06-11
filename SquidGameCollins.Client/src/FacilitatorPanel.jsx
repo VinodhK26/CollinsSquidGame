@@ -6,6 +6,10 @@ let connection = new HubConnectionBuilder()
     .withAutomaticReconnect()
     .build();
 
+connection.on("TaskUpdated", ({ teamId, taskId }) => {
+    console.log(`Team ${teamId} completed Task ${taskId}`);
+    // Optionally update local UI state
+});
 export default function FacilitatorPanel() {
     const [isConnected, setIsConnected] = useState(false);
 

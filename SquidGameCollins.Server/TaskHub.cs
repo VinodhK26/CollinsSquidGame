@@ -2,27 +2,16 @@ using Microsoft.AspNetCore.SignalR;
 
 public class TaskHub : Hub
 {
-    // Static in-memory state (shared across all connections)
-    private static Dictionary<int, HashSet<int>> _teamProgress = new();
+    private readonly DbService _db;
 
-    public override async Task OnConnectedAsync()
+    public TaskHub(DbService db)
     {
-        // When a new client connects, send the full leaderboard state
-        await Clients.Caller.SendAsync("LoadInitialState", _teamProgress);
-        await base.OnConnectedAsync();
+        _db = db;
     }
 
     public async Task MarkTaskCompleted(int teamId, int taskId)
     {
-        lock (_teamProgress)
-        {
-            if (!_teamProgress.ContainsKey(teamId))
-                _teamProgress[teamId] = new HashSet<int>();
-
-            _teamProgress[teamId].Add(taskId);
-        }
-
-        // Broadcast update to everyone
+        await _db.MarkTaskCompletedAsync(teamId, taskId);
         await Clients.All.SendAsync("TaskUpdated", new { teamId, taskId });
     }
 }
