@@ -7,16 +7,16 @@ WORKDIR /app/SquidGameCollins.Client
 RUN npm install
 RUN npm run build -- --mode production
 
-# .NET server build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# .NET 6 server build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 COPY . .
 RUN mkdir -p SquidGameCollins.Server/wwwroot
 COPY --from=client-build /app/SquidGameCollins.Client/dist SquidGameCollins.Server/wwwroot/
 RUN dotnet publish SquidGameCollins.Server/SquidGameCollins.Server.csproj -c Release -o /out
 
-# Runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+# Runtime image for .NET 6
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS final
 WORKDIR /app
 COPY --from=build /out ./
 EXPOSE 8080
