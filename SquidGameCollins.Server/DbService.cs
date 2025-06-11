@@ -10,6 +10,29 @@ public class DbService
         _connectionString = configuration.GetConnectionString("PostgresDb");
     }
 
+    public async Task<Dictionary<string, object>> GetLeaderboardStateAsync()
+    {
+        using var conn = new NpgsqlConnection(_connectionString);
+        var sql = "SELECT teamid, teamname, istask1completed, istask2completed, istask3completed, istask4completed FROM leaderboard";
+        var rows = await conn.QueryAsync(sql);
+
+        var result = new Dictionary<string, object>();
+
+        foreach (var row in rows)
+        {
+            result[row.teamid.ToString()] = new
+            {
+                teamName = row.teamname,
+                task1 = row.istask1completed,
+                task2 = row.istask2completed,
+                task3 = row.istask3completed,
+                task4 = row.istask4completed
+            };
+        }
+
+        return result;
+    }
+
 
 
     public async Task<List<string>> GetTeamNamesAsync()
