@@ -12,3 +12,14 @@ Dockerfile
 # Ignore IDE/editor files
 .vscode
 *.log
+
+# Mac system files
+.DS_Store
+
+# npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React build output (in case it's not being referenced directly)
+**/build
