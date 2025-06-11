@@ -12,36 +12,50 @@ public class DbService
 
     public async Task<Dictionary<string, object>> GetLeaderboardStateAsync()
     {
-        using var conn = new NpgsqlConnection(_connectionString);
-        var sql = "SELECT teamid, teamname, istask1completed, istask2completed, istask3completed, istask4completed FROM leaderboard";
-        var rows = await conn.QueryAsync(sql);
-
-        var result = new Dictionary<string, object>();
-
-        foreach (var row in rows)
+        try
         {
-            result[row.teamid.ToString()] = new
-            {
-                teamName = row.teamname,
-                task1 = row.istask1completed,
-                task2 = row.istask2completed,
-                task3 = row.istask3completed,
-                task4 = row.istask4completed
-            };
-        }
+            using var conn = new NpgsqlConnection(_connectionString);
+            var sql = "SELECT teamid, teamname, istask1completed, istask2completed, istask3completed, istask4completed FROM leaderboard";
+            var rows = await conn.QueryAsync(sql);
 
-        return result;
+            var result = new Dictionary<string, object>();
+
+            foreach (var row in rows)
+            {
+                result[row.teamid.ToString()] = new
+                {
+                    teamName = row.teamname,
+                    task1 = row.istask1completed,
+                    task2 = row.istask2completed,
+                    task3 = row.istask3completed,
+                    task4 = row.istask4completed
+                };
+            }
+
+            return result;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[DB ERROR - GetLeaderboardStateAsync] {ex.Message}");
+            throw;
+        }
     }
 
     public async Task CreateTeamAsync(string teamName)
     {
-        using var conn = new NpgsqlConnection(_connectionString);
-
-        string sql = @"
-        INSERT INTO leaderboard (teamname, istask1completed, istask2completed, istask3completed, istask4completed)
-        VALUES (@TeamName, false, false, false, false)";
-
-        await conn.ExecuteAsync(sql, new { TeamName = teamName });
+        try
+        {
+            using var conn = new NpgsqlConnection(_connectionString);
+            string sql = @"
+            INSERT INTO leaderboard (teamname, istask1completed, istask2completed, istask3completed, istask4completed)
+            VALUES (@TeamName, false, false, false, false)";
+            await conn.ExecuteAsync(sql, new { TeamName = teamName });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[DB ERROR - CreateTeamAsync] {ex.Message}");
+            throw;
+        }
     }
 
 
@@ -55,10 +69,18 @@ public class DbService
 
     public async Task MarkTaskCompletedAsync(int teamId, int taskNumber)
     {
-        using var conn = new NpgsqlConnection(_connectionString);
-        string columnName = $"istask{taskNumber}completed";
-        string sql = $"UPDATE leaderboard SET {columnName} = TRUE WHERE teamid = @TeamId";
-        await conn.ExecuteAsync(sql, new { TeamId = teamId });
+        try
+        {
+            using var conn = new NpgsqlConnection(_connectionString);
+            string column = $"istask{taskNumber}completed";
+            string sql = $"UPDATE leaderboard SET {column} = TRUE WHERE teamid = @TeamId";
+            await conn.ExecuteAsync(sql, new { TeamId = teamId });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[DB ERROR - MarkTaskCompletedAsync] {ex.Message}");
+            throw;
+        }
     }
 
 }
