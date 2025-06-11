@@ -1,14 +1,14 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
-      "Microsoft.AspNetCore.SpaProxy/8.0.17": {
+    "net6.0": {
+      "Microsoft.AspNetCore.SpaProxy/6.0.36": {
         "type": "package",
         "compile": {
-          "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll": {}
         },
         "runtime": {
-          "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll": {}
+          "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -59,12 +59,12 @@
           "Microsoft.OpenApi": "1.6.14"
         },
         "compile": {
-          "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll": {
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Swashbuckle.AspNetCore.Swagger.dll": {
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -78,12 +78,12 @@
           "Swashbuckle.AspNetCore.Swagger": "6.6.2"
         },
         "compile": {
-          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -91,12 +91,12 @@
       "Swashbuckle.AspNetCore.SwaggerUI/6.6.2": {
         "type": "package",
         "compile": {
-          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -107,18 +107,18 @@
     }
   },
   "libraries": {
-    "Microsoft.AspNetCore.SpaProxy/8.0.17": {
-      "sha512": "2Z9U+Uejld4j+cKKfzgwQBYunmQsqCvrTNNjyTcg5i4BV+LEY72tEd49DECrJhbnvTVNNzpoU5UJr8cHaAbhZw==",
+    "Microsoft.AspNetCore.SpaProxy/6.0.36": {
+      "sha512": "33MgFYdm9iAcb/ZtxS+QuZNe21H0JmjOm1WNJYIDyED5f+gfJApv2tOkGLM7BQGEk/0dlCwcTnPP8JSVLy7M3Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.spaproxy/8.0.17",
+      "path": "microsoft.aspnetcore.spaproxy/6.0.36",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.AspNetCore.SpaProxy.targets",
-        "lib/net8.0/Microsoft.AspNetCore.SpaProxy.dll",
-        "microsoft.aspnetcore.spaproxy.8.0.17.nupkg.sha512",
+        "lib/net6.0/Microsoft.AspNetCore.SpaProxy.dll",
+        "microsoft.aspnetcore.spaproxy.6.0.36.nupkg.sha512",
         "microsoft.aspnetcore.spaproxy.nuspec"
       ]
     },
@@ -472,8 +472,8 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
-      "Microsoft.AspNetCore.SpaProxy >= 8.*-*",
+    "net6.0": [
+      "Microsoft.AspNetCore.SpaProxy >= 6.*-*",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
   },
@@ -484,11 +484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
+      "projectUniqueName": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
       "projectName": "SquidGameCollins.Server",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
+      "projectPath": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\obj\\",
+      "outputPath": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\SquidGameCollins.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -499,15 +499,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -524,12 +524,12 @@
       "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.AspNetCore.SpaProxy": {
             "target": "Package",
-            "version": "[8.*-*, )"
+            "version": "[6.*-*, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -547,6 +547,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -555,7 +573,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

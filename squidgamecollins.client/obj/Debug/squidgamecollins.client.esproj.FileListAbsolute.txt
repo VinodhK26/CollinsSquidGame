@@ -1,1 +1,2 @@
 C:\Users\Admin\source\repos\SquidGameCollins\squidgamecollins.client\obj\Debug\squidgamecollins.client.esproj.CoreCompileInputs.cache
+C:\Repo\CollinsSquidGame\CollinsSquidGame\squidgamecollins.client\obj\Debug\squidgamecollins.client.esproj.CoreCompileInputs.cache
