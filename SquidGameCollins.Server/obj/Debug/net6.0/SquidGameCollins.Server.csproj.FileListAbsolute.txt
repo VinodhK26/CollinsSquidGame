@@ -7,6 +7,7 @@ C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\SquidGameCollins.Server.runtimeconfig.json
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\SquidGameCollins.Server.dll
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\SquidGameCollins.Server.pdb
+C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\Microsoft.AspNetCore.SpaProxy.dll
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -37,4 +38,3 @@ C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\obj\Debug\net6
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\obj\Debug\net6.0\SquidGameCollins.Server.pdb
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\obj\Debug\net6.0\SquidGameCollins.Server.genruntimeconfig.cache
 C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\obj\Debug\net6.0\ref\SquidGameCollins.Server.dll
-C:\Repo\CollinsSquidGame\CollinsSquidGame\SquidGameCollins.Server\bin\Debug\net6.0\Microsoft.AspNetCore.SpaProxy.dll

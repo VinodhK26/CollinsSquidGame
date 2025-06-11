@@ -47,7 +47,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "squidgamecollins.client",
+              "Title": "squidgamecollins.client.esproj",
               "DocumentMoniker": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\squidgamecollins.client\\squidgamecollins.client.esproj",
               "RelativeDocumentMoniker": "squidgamecollins.client\\squidgamecollins.client.esproj",
               "ToolTip": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\squidgamecollins.client\\squidgamecollins.client.esproj",
@@ -67,8 +67,7 @@
               "RelativeToolTip": "squidgamecollins.client\\src\\App.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-11T09:10:35.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T09:10:35.543Z"
             },
             {
               "$type": "Document",
