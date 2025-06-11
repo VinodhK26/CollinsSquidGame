@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 
 public class TaskHub : Hub
 {
@@ -26,13 +26,20 @@ public class TaskHub : Hub
     {
         try
         {
-            await _db.MarkTaskCompletedAsync(teamId, taskId);
-            await Clients.All.SendAsync("TaskUpdated", new { teamId, taskId });
+            Console.WriteLine($"Toggle request: teamId={teamId}, taskId={taskId}");
+            var isCompleted = await _db.ToggleTaskAsync(teamId, taskId);
+
+            await Clients.All.SendAsync("TaskUpdated", new
+            {
+                teamId,
+                taskId,
+                isCompleted
+            });
         }
         catch (Exception ex)
         {
             Console.WriteLine($"[MarkTaskCompleted ERROR] {ex.Message}");
-            throw; // rethrow so client still receives error
+            throw;
         }
     }
 

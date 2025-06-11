@@ -20,14 +20,14 @@ export default function FacilitatorPanel() {
             setTaskStatus(data);
         });
 
-        conn.on("TaskUpdated", ({ teamId, taskId }) => {
+        conn.on("TaskUpdated", ({ teamId, taskId, isCompleted }) => {
             setTaskStatus(prev => {
                 const team = prev[teamId] || {};
                 return {
                     ...prev,
                     [teamId]: {
                         ...team,
-                        [`task${taskId}`]: true
+                        [`task${taskId}`]: isCompleted
                     }
                 };
             });

@@ -67,23 +67,29 @@ public class DbService
         return result.ToList();
     }
 
-    public async Task MarkTaskCompletedAsync(int teamId, int taskNumber)
+    public async Task<bool> ToggleTaskAsync(int teamId, int taskNumber)
     {
         try
         {
             using var conn = new NpgsqlConnection(_connectionString);
-            string column = $"istask{taskNumber}completed"; // Must match exactly
+            string column = $"istask{taskNumber}completed";
 
-            // Verify column name is safe
             if (taskNumber is < 1 or > 4)
                 throw new ArgumentException("Invalid task number");
 
-            string sql = $"UPDATE leaderboard SET {column} = TRUE WHERE teamid = @TeamId";
-            await conn.ExecuteAsync(sql, new { TeamId = teamId });
+            // Toggle the boolean
+            string toggleSql = $"UPDATE leaderboard SET {column} = NOT {column} WHERE teamid = @TeamId";
+            await conn.ExecuteAsync(toggleSql, new { TeamId = teamId });
+
+            // Fetch the new value
+            string fetchSql = $"SELECT {column} FROM leaderboard WHERE teamid = @TeamId";
+            bool newValue = await conn.QuerySingleAsync<bool>(fetchSql, new { TeamId = teamId });
+
+            return newValue;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[DB ERROR - MarkTaskCompletedAsync] {ex.Message}");
+            Console.WriteLine($"[DB ERROR - ToggleTaskAsync] {ex.Message}");
             throw;
         }
     }
