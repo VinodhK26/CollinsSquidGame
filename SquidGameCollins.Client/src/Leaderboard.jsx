@@ -14,14 +14,14 @@ export default function Leaderboard() {
             .withAutomaticReconnect()
             .build();
 
-        connection.on("TaskUpdated", ({ teamId, taskId }) => {
+        connection.on("TaskUpdated", ({ teamId, taskId, isCompleted }) => {
             setProgress(prev => {
                 const team = prev[teamId] || { teamName: `Team ${teamId}` };
                 return {
                     ...prev,
                     [teamId]: {
                         ...team,
-                        [`task${taskId}`]: true
+                        [`task${taskId}`]: isCompleted
                     }
                 };
             });
@@ -38,7 +38,8 @@ export default function Leaderboard() {
         };
     }, []);
 
-    const renderCell = (completed) => completed ? <CheckMark /> : null;
+    const renderCell = (completed) =>
+        completed === true ? <CheckMark /> : <span>&nbsp;</span>;
 
     return (
         <div>
