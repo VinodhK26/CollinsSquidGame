@@ -8,7 +8,7 @@ RUN dotnet restore ./SquidGameCollins.Server/SquidGameCollins.Server.csproj
 
 # Copy rest and publish
 COPY . ./
-RUN dotnet publish SquidGameCollins.Server/SquidGameCollins.Server.csproj -c Release -o /out
+RUN dotnet publish SquidGameCollins.Server/SquidGameCollins.Server.csproj -c Release -o /out --verbosity detailed
 
 # Stage 2: Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
