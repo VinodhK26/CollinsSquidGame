@@ -14,3 +14,10 @@ COPY . .
 RUN mkdir -p SquidGameCollins.Server/wwwroot
 COPY --from=client-build /app/SquidGameCollins.Client/dist SquidGameCollins.Server/wwwroot/
 RUN dotnet publish SquidGameCollins.Server/SquidGameCollins.Server.csproj -c Release -o /out
+
+# Runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /out ./
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "SquidGameCollins.Server.dll"]
