@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { HubConnectionBuilder, HubConnectionState } from '@microsoft/signalr';
 
 let connection = new HubConnectionBuilder()
-    .withUrl("https://collinslbsqgame.up.railway.app")
+    .withUrl("/taskHub")  // Use the correct relative path to the SignalR Hub
     .withAutomaticReconnect()
     .build();
 
