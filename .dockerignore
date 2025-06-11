@@ -1,0 +1,14 @@
+# Ignore node_modules from both frontend and backend
+**/node_modules
+**/bin
+**/obj
+
+# Ignore Git and system files
+.git
+.gitignore
+Dockerfile
+.dockerignore
+
+# Ignore IDE/editor files
+.vscode
+*.log
