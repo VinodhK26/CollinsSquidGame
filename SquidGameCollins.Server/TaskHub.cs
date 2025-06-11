@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.SignalR;
+
 public class TaskHub : Hub
 {
     // Static in-memory state (shared across all connections)

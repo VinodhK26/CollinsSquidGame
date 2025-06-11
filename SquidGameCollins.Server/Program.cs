@@ -1,52 +1,50 @@
+using Microsoft.AspNetCore.SignalR;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Bind to Railway's dynamic port or default to 8080
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 builder.WebHost.UseUrls($"http://*:{port}");
-// Add services to the container.
 
+// Add services
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
         policy
-            .WithOrigins("https://collinslbsqgame.up.railway.app/index.html") // change to your actual domain
+            .WithOrigins("https://collinslbsqgame.up.railway.app")
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials();
     });
 });
 
-builder.WebHost.ConfigureKestrel(options =>
-{
-    options.ListenAnyIP(8080); // Force .NET to use Railway's expected port
-});
 var app = builder.Build();
 
-app.MapGet("/", () => "SignalR Leaderboard Backend is running");
+// Middleware
+app.UseCors();
 
-// Map the SignalR hub
-app.MapHub<TaskHub>("/taskHub");
-
-app.UseDefaultFiles();
-app.UseStaticFiles();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
+app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.MapHub<TaskHub>("/taskHub");
 app.MapFallbackToFile("/index.html");
+
+app.MapGet("/", () => "SignalR Leaderboard Backend is running");
 
 app.Run();
