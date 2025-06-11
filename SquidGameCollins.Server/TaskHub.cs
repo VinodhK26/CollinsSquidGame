@@ -22,6 +22,18 @@ public class TaskHub : Hub
         await Clients.All.SendAsync("LoadInitialState", data);
     }
 
+    public async Task CreateTeam(string teamName)
+    {
+        if (string.IsNullOrWhiteSpace(teamName))
+            return;
+
+        await _db.CreateTeamAsync(teamName);
+
+        // After adding team, refresh everyone's view
+        var data = await _db.GetLeaderboardStateAsync();
+        await Clients.All.SendAsync("LoadInitialState", data);
+    }
+
     public async Task MarkTaskCompleted(int teamId, int taskId)
     {
         await _db.MarkTaskCompletedAsync(teamId, taskId);

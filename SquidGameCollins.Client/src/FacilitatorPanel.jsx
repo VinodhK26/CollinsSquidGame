@@ -48,22 +48,10 @@ export default function FacilitatorPanel() {
     const handleCreateTeam = async () => {
         if (!newTeamName.trim()) return;
 
-        const response = await fetch("/api/leaderboard/create", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ teamName: newTeamName })
-        });
-
-        if (response.ok) {
-            setNewTeamName("");
-
-            // 🔁 Broadcast refresh to all clients via SignalR
-            if (connection?.state === "Connected") {
-                connection.invoke("RequestStateRefresh")
-                    .catch(err => console.error("Refresh failed", err));
-            }
-        } else {
-            console.error("Failed to create team");
+        if (connection?.state === "Connected") {
+            connection.invoke("CreateTeam", newTeamName)
+                .then(() => setNewTeamName(""))
+                .catch(err => console.error("Failed to create team:", err));
         }
     };
 
@@ -98,6 +86,7 @@ export default function FacilitatorPanel() {
                                 <input
                                     type="checkbox"
                                     checked={teamData?.[`task${taskId}`] || false}
+                                    disabled={teamData?.[`task${taskId}`] || false} // Prevent unchecking
                                     onChange={() => handleCheck(teamId, taskId)}
                                 />
                                 Task {taskId}
