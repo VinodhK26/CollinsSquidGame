@@ -15,7 +15,7 @@
       <Version>9.0.6</Version>
     </PackageReference>
     <PackageReference Include="Npgsql" Version="9.0.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.4" />
+	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
