@@ -1,0 +1,12 @@
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\SquidGameCollins.Server.exe
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\appsettings.Development.json
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\appsettings.json
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\SquidGameCollins.Server.dll
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\SquidGameCollins.Server.deps.json
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\SquidGameCollins.Server.runtimeconfig.json
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\SquidGameCollins.Server.pdb
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\Microsoft.AspNetCore.SpaProxy.dll
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\Microsoft.OpenApi.dll
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Repo\CollinsSquidGame\CollinsSquidGame\out\Swashbuckle.AspNetCore.SwaggerUI.dll

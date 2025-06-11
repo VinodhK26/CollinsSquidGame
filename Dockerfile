@@ -1,5 +1,5 @@
 # Stage 1: Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM ghcr.io/devcontainers/dotnet:0-8.0-bullseye AS build
 WORKDIR /app
 
 # Copy and restore
