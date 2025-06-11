@@ -86,7 +86,6 @@ export default function FacilitatorPanel() {
                                 <input
                                     type="checkbox"
                                     checked={teamData?.[`task${taskId}`] || false}
-                                    disabled={teamData?.[`task${taskId}`] || false} // Prevent unchecking
                                     onChange={() => handleCheck(teamId, taskId)}
                                 />
                                 Task {taskId}
