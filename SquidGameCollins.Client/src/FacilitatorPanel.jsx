@@ -56,8 +56,10 @@ export default function FacilitatorPanel() {
     };
 
     const handleCheck = (teamId, taskId) => {
+        const parsedTeamId = parseInt(teamId);
+
         if (connection?.state === "Connected") {
-            connection.invoke("MarkTaskCompleted", teamId, taskId)
+            connection.invoke("MarkTaskCompleted", parsedTeamId, taskId)
                 .catch(err => console.error("Invoke failed: ", err));
         } else {
             console.warn("Connection not ready. Try again shortly.");
