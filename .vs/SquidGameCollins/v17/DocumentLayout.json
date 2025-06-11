@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|c:\\users\\admin\\source\\repos\\squidgamecollins\\squidgamecollins.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|solutionrelative:squidgamecollins.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|c:\\users\\admin\\source\\repos\\squidgamecollins\\squidgamecollins.client\\src\\leaderboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|solutionrelative:squidgamecollins.client\\src\\leaderboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|c:\\users\\admin\\source\\repos\\squidgamecollins\\squidgamecollins.client\\src\\facilitatorpanel.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|solutionrelative:squidgamecollins.client\\src\\facilitatorpanel.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|c:\\users\\admin\\source\\repos\\squidgamecollins\\squidgamecollins.server\\taskhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|solutionrelative:squidgamecollins.server\\taskhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|c:\\users\\admin\\source\\repos\\squidgamecollins\\squidgamecollins.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|solutionrelative:squidgamecollins.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|c:\\users\\admin\\source\\repos\\squidgamecollins\\squidgamecollins.server\\squidgamecollins.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|solutionrelative:squidgamecollins.server\\squidgamecollins.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|c:\\users\\admin\\source\\repos\\squidgamecollins\\squidgamecollins.client\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|solutionrelative:squidgamecollins.client\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "squidgamecollins.client\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\src\\App.jsx",
+              "RelativeToolTip": "squidgamecollins.client\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-11T09:10:35.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Leaderboard.jsx",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\src\\Leaderboard.jsx",
+              "RelativeDocumentMoniker": "squidgamecollins.client\\src\\Leaderboard.jsx",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\src\\Leaderboard.jsx",
+              "RelativeToolTip": "squidgamecollins.client\\src\\Leaderboard.jsx",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-11T09:09:49.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FacilitatorPanel.jsx",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\src\\FacilitatorPanel.jsx",
+              "RelativeDocumentMoniker": "squidgamecollins.client\\src\\FacilitatorPanel.jsx",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\src\\FacilitatorPanel.jsx",
+              "RelativeToolTip": "squidgamecollins.client\\src\\FacilitatorPanel.jsx",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA7wCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-11T09:09:28.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskHub.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\TaskHub.cs",
+              "RelativeDocumentMoniker": "SquidGameCollins.Server\\TaskHub.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\TaskHub.cs",
+              "RelativeToolTip": "SquidGameCollins.Server\\TaskHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T08:58:57.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\Program.cs",
+              "RelativeDocumentMoniker": "SquidGameCollins.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\Program.cs",
+              "RelativeToolTip": "SquidGameCollins.Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T08:58:27.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SquidGameCollins.Server",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
+              "RelativeDocumentMoniker": "SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
+              "RelativeToolTip": "SquidGameCollins.Server\\SquidGameCollins.Server.csproj",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-11T08:57:09.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launch.json",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\.vscode\\launch.json",
+              "RelativeDocumentMoniker": "squidgamecollins.client\\.vscode\\launch.json",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\.vscode\\launch.json",
+              "RelativeToolTip": "squidgamecollins.client\\.vscode\\launch.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-11T08:57:05.077Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:49619",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\SquidGameCollins.Server\\..\\squidgamecollins.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

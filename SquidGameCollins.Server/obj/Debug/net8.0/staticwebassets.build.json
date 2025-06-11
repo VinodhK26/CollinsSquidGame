@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "bR/6ub/K8StaTuIJnjc+SPvH8so4TDh9/7ajN3XiD80=",
+  "Source": "SquidGameCollins.Server",
+  "BasePath": "_content/SquidGameCollins.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Admin\\source\\repos\\SquidGameCollins\\squidgamecollins.client\\squidgamecollins.client.esproj",
+      "Version": 2,
+      "Source": "squidgamecollins.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
