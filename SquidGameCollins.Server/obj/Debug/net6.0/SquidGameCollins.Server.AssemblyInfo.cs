@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SquidGameCollins.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79bdce67dbd7d49339d8509256a57779269519b3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a57846d6e44bb08ae274cf7e90baf6031649efcc")]
 [assembly: System.Reflection.AssemblyProductAttribute("SquidGameCollins.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SquidGameCollins.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

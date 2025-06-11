@@ -16,6 +16,12 @@ public class TaskHub : Hub
         await base.OnConnectedAsync();
     }
 
+    public async Task RequestStateRefresh()
+    {
+        var data = await _db.GetLeaderboardStateAsync();
+        await Clients.All.SendAsync("LoadInitialState", data);
+    }
+
     public async Task MarkTaskCompleted(int teamId, int taskId)
     {
         await _db.MarkTaskCompletedAsync(teamId, taskId);

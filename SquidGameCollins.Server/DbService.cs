@@ -33,6 +33,17 @@ public class DbService
         return result;
     }
 
+    public async Task CreateTeamAsync(string teamName)
+    {
+        using var conn = new NpgsqlConnection(_connectionString);
+
+        string sql = @"
+        INSERT INTO leaderboard (teamname, istask1completed, istask2completed, istask3completed, istask4completed)
+        VALUES (@TeamName, false, false, false, false)";
+
+        await conn.ExecuteAsync(sql, new { TeamName = teamName });
+    }
+
 
 
     public async Task<List<string>> GetTeamNamesAsync()
