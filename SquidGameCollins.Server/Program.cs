@@ -8,6 +8,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8080); // Force .NET to use Railway's expected port
+});
 var app = builder.Build();
 
 app.MapGet("/", () => "SignalR Leaderboard Backend is running");

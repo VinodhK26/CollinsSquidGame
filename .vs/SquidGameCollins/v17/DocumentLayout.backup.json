@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|c:\\repo\\collinssquidgame\\collinssquidgame\\squidgamecollins.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|solutionrelative:squidgamecollins.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|c:\\repo\\collinssquidgame\\collinssquidgame\\squidgamecollins.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|solutionrelative:squidgamecollins.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|c:\\repo\\collinssquidgame\\collinssquidgame\\squidgamecollins.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{99166B3C-1431-4E1A-5DA6-94CC1C6CD64B}|squidgamecollins.client\\squidgamecollins.client.esproj|solutionrelative:squidgamecollins.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80E691F2-7FB8-4B13-8F9D-24D2BFF864C2}|SquidGameCollins.Server\\SquidGameCollins.Server.csproj|c:\\repo\\collinssquidgame\\collinssquidgame\\squidgamecollins.server\\squidgamecollins.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -46,17 +46,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "vite.config.js",
               "DocumentMoniker": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\SquidGameCollins.Client\\vite.config.js",
               "RelativeDocumentMoniker": "SquidGameCollins.Client\\vite.config.js",
               "ToolTip": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\SquidGameCollins.Client\\vite.config.js",
               "RelativeToolTip": "SquidGameCollins.Client\\vite.config.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-06-11T11:18:46.612Z",
               "EditorCaption": ""
@@ -123,13 +123,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\SquidGameCollins.Server\\Program.cs",
               "RelativeDocumentMoniker": "SquidGameCollins.Server\\Program.cs",
               "ToolTip": "C:\\Repo\\CollinsSquidGame\\CollinsSquidGame\\SquidGameCollins.Server\\Program.cs",
               "RelativeToolTip": "SquidGameCollins.Server\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T08:58:27.483Z",
               "EditorCaption": ""
