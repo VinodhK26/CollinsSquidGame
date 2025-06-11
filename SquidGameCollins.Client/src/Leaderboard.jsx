@@ -6,7 +6,7 @@ export default function Leaderboard() {
 
     useEffect(() => {
         const connection = new HubConnectionBuilder()
-            .withUrl("https://localhost:5001/taskHub") // or your backend
+            .withUrl("/taskHub") // relative path works since both client & server are on same domain
             .withAutomaticReconnect()
             .build();
 
