@@ -19,6 +19,10 @@ export default function Leaderboard() {
                 };
             });
         });
+        connection.on("LoadInitialState", (data) => {
+            setProgress(data);
+        });
+
 
         connection.start().catch(console.error);
 
