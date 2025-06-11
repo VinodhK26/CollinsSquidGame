@@ -46,5 +46,5 @@ app.MapHub<TaskHub>("/taskHub");
 app.MapFallbackToFile("/index.html");
 
 app.MapGet("/", () => "SignalR Leaderboard Backend is running");
-
+Console.WriteLine($"App is listening on port {port}");
 app.Run();
