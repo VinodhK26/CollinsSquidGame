@@ -15,6 +15,7 @@ RUN mkdir -p SquidGameCollins.Server/wwwroot
 COPY --from=client-build /app/SquidGameCollins.Client/build SquidGameCollins.Server/wwwroot/
 RUN dotnet publish SquidGameCollins.Server/SquidGameCollins.Server.csproj -c Release -o /out
 
+#Dummy Comment
 # Stage 3: Run app
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
