@@ -9,7 +9,10 @@ import {
     Dialog,
     DialogTitle,
     DialogContent,
-    Box
+    Box,
+    Container,
+    useMediaQuery,
+    useTheme
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -19,6 +22,9 @@ import FacilitatorPanel from './FacilitatorPanel';
 const HomePage = () => {
     const [anchorEl, setAnchorEl] = useState(null);
     const [openFacilitator, setOpenFacilitator] = useState(false);
+
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     const handleMenuClick = (event) => setAnchorEl(event.currentTarget);
     const handleCloseMenu = () => setAnchorEl(null);
@@ -31,27 +37,47 @@ const HomePage = () => {
     return (
         <>
             <AppBar position="static">
-                <Toolbar sx={{ justifyContent: "space-between" }}>
-                    <Box sx={{ flex: 1 }} /> {/* Placeholder for left spacing */}
-                    <Typography variant="h6" component="div" sx={{ flex: 1, textAlign: 'center' }}>
+                <Toolbar>
+                    <Typography
+                        variant={isMobile ? 'h6' : 'h5'}
+                        component="div"
+                        sx={{ flexGrow: 1, textAlign: 'center', wordBreak: 'break-word' }}
+                    >
                         Collin's GroundBreaking Game
                     </Typography>
-                    <IconButton edge="end" color="inherit" onClick={handleMenuClick}>
+                    <IconButton
+                        edge="end"
+                        color="inherit"
+                        onClick={handleMenuClick}
+                        aria-label="menu"
+                    >
                         <MenuIcon />
                     </IconButton>
-                    <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleCloseMenu}>
+                    <Menu
+                        anchorEl={anchorEl}
+                        open={Boolean(anchorEl)}
+                        onClose={handleCloseMenu}
+                        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+                    >
                         <MenuItem onClick={handleOpenFacilitator}>Facilitator Panel</MenuItem>
                     </Menu>
                 </Toolbar>
             </AppBar>
 
-            <Box p={2}>
+            <Container maxWidth="lg" sx={{ py: 3 }}>
                 <Leaderboard />
-            </Box>
+            </Container>
 
-            <Dialog open={openFacilitator} onClose={handleCloseFacilitator} maxWidth="md" fullWidth>
+            <Dialog
+                open={openFacilitator}
+                onClose={handleCloseFacilitator}
+                maxWidth="md"
+                fullWidth
+                scroll="paper"
+            >
                 <DialogTitle>Facilitator Panel</DialogTitle>
-                <DialogContent>
+                <DialogContent dividers>
                     <FacilitatorPanel />
                 </DialogContent>
             </Dialog>
