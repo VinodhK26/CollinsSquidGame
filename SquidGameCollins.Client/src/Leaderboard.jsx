@@ -56,7 +56,7 @@ export default function Leaderboard() {
     return (
         <Box>
             <Typography variant="h5" gutterBottom>
-                Live Leaderboard
+                Live Team Activity Leaderboard
             </Typography>
 
             <TableContainer component={Paper}>
@@ -64,10 +64,10 @@ export default function Leaderboard() {
                     <TableHead>
                         <TableRow>
                             <TableCell><strong>Team Name</strong></TableCell>
-                            <TableCell align="center">Task 1</TableCell>
-                            <TableCell align="center">Task 2</TableCell>
-                            <TableCell align="center">Task 3</TableCell>
-                            <TableCell align="center">Task 4</TableCell>
+                            <TableCell align="center">Challenge 1</TableCell>
+                            <TableCell align="center">Challenge 2</TableCell>
+                            <TableCell align="center">Challenge 3</TableCell>
+                            <TableCell align="center">Challenge 4</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
