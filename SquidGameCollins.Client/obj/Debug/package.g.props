@@ -9,7 +9,11 @@
     <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">vite build</PackageJsonScriptsBuild>
     <PackageJsonScriptsLint Condition="$(PackageJsonScriptsLint) == ''">eslint .</PackageJsonScriptsLint>
     <PackageJsonScriptsPreview Condition="$(PackageJsonScriptsPreview) == ''">vite preview</PackageJsonScriptsPreview>
+    <PackageJsonDependenciesEmotionReact Condition="$(PackageJsonDependenciesEmotionReact) == ''">^11.14.0</PackageJsonDependenciesEmotionReact>
+    <PackageJsonDependenciesEmotionStyled Condition="$(PackageJsonDependenciesEmotionStyled) == ''">^11.14.0</PackageJsonDependenciesEmotionStyled>
     <PackageJsonDependenciesMicrosoftSignalr Condition="$(PackageJsonDependenciesMicrosoftSignalr) == ''">^8.0.7</PackageJsonDependenciesMicrosoftSignalr>
+    <PackageJsonDependenciesMuiIconsMaterial Condition="$(PackageJsonDependenciesMuiIconsMaterial) == ''">^7.1.1</PackageJsonDependenciesMuiIconsMaterial>
+    <PackageJsonDependenciesMuiMaterial Condition="$(PackageJsonDependenciesMuiMaterial) == ''">^7.1.1</PackageJsonDependenciesMuiMaterial>
     <PackageJsonDependenciesReact Condition="$(PackageJsonDependenciesReact) == ''">^19.1.0</PackageJsonDependenciesReact>
     <PackageJsonDependenciesReactDom Condition="$(PackageJsonDependenciesReactDom) == ''">^19.1.0</PackageJsonDependenciesReactDom>
     <PackageJsonDevdependenciesEslintJs Condition="$(PackageJsonDevdependenciesEslintJs) == ''">^9.25.0</PackageJsonDevdependenciesEslintJs>

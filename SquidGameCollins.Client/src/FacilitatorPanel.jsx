@@ -1,14 +1,22 @@
 ﻿import React, { useEffect, useState } from 'react';
-import { HubConnectionBuilder, HubConnectionState } from '@microsoft/signalr';
-
+import {
+    Box,
+    Typography,
+    TextField,
+    Button,
+    Checkbox,
+    FormControlLabel,
+    FormGroup,
+    Paper,
+    Divider
+} from '@mui/material';
+import { HubConnectionBuilder } from '@microsoft/signalr';
 
 export default function FacilitatorPanel() {
     const [isConnected, setIsConnected] = useState(false);
     const [connection, setConnection] = useState(null);
     const [taskStatus, setTaskStatus] = useState({});
-
     const [newTeamName, setNewTeamName] = useState("");
-
 
     useEffect(() => {
         const conn = new HubConnectionBuilder()
@@ -57,7 +65,6 @@ export default function FacilitatorPanel() {
 
     const handleCheck = (teamId, taskId) => {
         const parsedTeamId = parseInt(teamId);
-
         if (connection?.state === "Connected") {
             connection.invoke("MarkTaskCompleted", parsedTeamId, taskId)
                 .catch(err => console.error("Invoke failed: ", err));
@@ -67,37 +74,52 @@ export default function FacilitatorPanel() {
     };
 
     return (
-        <div>
-            <h3>Facilitator Panel</h3>
-            <div style={{ marginBottom: "20px" }}>
-                <input
-                    type="text"
-                    placeholder="Enter team name"
+        <Box>
+            <Typography variant="h5" gutterBottom>
+                Facilitator Panel
+            </Typography>
+
+            <Box display="flex" alignItems="center" mb={3}>
+                <TextField
+                    label="Team Name"
+                    variant="outlined"
+                    size="small"
                     value={newTeamName}
                     onChange={(e) => setNewTeamName(e.target.value)}
-                    style={{ marginRight: "10px" }}
+                    sx={{ mr: 2 }}
                 />
-                <button onClick={handleCreateTeam}>Create Team</button>
-            </div>
+                <Button variant="contained" onClick={handleCreateTeam}>
+                    Create Team
+                </Button>
+            </Box>
+
             {isConnected ? (
                 Object.entries(taskStatus).map(([teamId, teamData]) => (
-                    <div key={teamId}>
-                        {teamData.teamName || `Team ${teamId}`}:
-                        {[1, 2, 3, 4].map(taskId => (
-                            <label key={taskId} style={{ marginRight: "10px" }}>
-                                <input
-                                    type="checkbox"
-                                    checked={teamData?.[`task${taskId}`] || false}
-                                    onChange={() => handleCheck(teamId, taskId)}
+                    <Paper key={teamId} sx={{ p: 2, mb: 2 }}>
+                        <Typography variant="subtitle1" gutterBottom>
+                            {teamData.teamName || `Team ${teamId}`}
+                        </Typography>
+                        <Divider sx={{ mb: 1 }} />
+                        <FormGroup row>
+                            {[1, 2, 3, 4].map(taskId => (
+                                <FormControlLabel
+                                    key={taskId}
+                                    control={
+                                        <Checkbox
+                                            checked={teamData?.[`task${taskId}`] || false}
+                                            onChange={() => handleCheck(teamId, taskId)}
+                                        />
+                                    }
+                                    label={`Task ${taskId}`}
+                                    sx={{ mr: 2 }}
                                 />
-                                Task {taskId}
-                            </label>
-                        ))}
-                    </div>
+                            ))}
+                        </FormGroup>
+                    </Paper>
                 ))
             ) : (
-                <p>Connecting to server...</p>
+                <Typography color="text.secondary">Connecting to server...</Typography>
             )}
-        </div>
+        </Box>
     );
 }

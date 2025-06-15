@@ -1,8 +1,19 @@
 ﻿import React, { useEffect, useState } from 'react';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Paper,
+    Typography,
+    Box
+} from '@mui/material';
 import { HubConnectionBuilder } from '@microsoft/signalr';
 
 const CheckMark = () => (
-    <span style={{ color: 'green', fontWeight: 'bold' }}>✔</span>
+    <Typography color="success.main" fontWeight="bold">✔</Typography>
 );
 
 export default function Leaderboard() {
@@ -38,47 +49,40 @@ export default function Leaderboard() {
         };
     }, []);
 
-    const renderCell = (completed) =>
-        completed === true ? <CheckMark /> : <span>&nbsp;</span>;
+    const renderCell = (completed) => (
+        completed === true ? <CheckMark /> : <Box>&nbsp;</Box>
+    );
 
     return (
-        <div>
-            <h3>Live Leaderboard</h3>
-            <table style={{ borderCollapse: 'collapse', width: '100%' }}>
-                <thead>
-                    <tr>
-                        <th style={thStyle}>Team Name</th>
-                        <th style={thStyle}>Task 1</th>
-                        <th style={thStyle}>Task 2</th>
-                        <th style={thStyle}>Task 3</th>
-                        <th style={thStyle}>Task 4</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {Object.entries(progress).map(([teamId, teamData]) => (
-                        <tr key={teamId}>
-                            <td style={tdStyle}>{teamData.teamName || `Team ${teamId}`}</td>
-                            <td style={tdStyle}>{renderCell(teamData.task1)}</td>
-                            <td style={tdStyle}>{renderCell(teamData.task2)}</td>
-                            <td style={tdStyle}>{renderCell(teamData.task3)}</td>
-                            <td style={tdStyle}>{renderCell(teamData.task4)}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+        <Box>
+            <Typography variant="h5" gutterBottom>
+                Live Leaderboard
+            </Typography>
+
+            <TableContainer component={Paper}>
+                <Table>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell><strong>Team Name</strong></TableCell>
+                            <TableCell align="center">Task 1</TableCell>
+                            <TableCell align="center">Task 2</TableCell>
+                            <TableCell align="center">Task 3</TableCell>
+                            <TableCell align="center">Task 4</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {Object.entries(progress).map(([teamId, teamData]) => (
+                            <TableRow key={teamId}>
+                                <TableCell>{teamData.teamName || `Team ${teamId}`}</TableCell>
+                                <TableCell align="center">{renderCell(teamData.task1)}</TableCell>
+                                <TableCell align="center">{renderCell(teamData.task2)}</TableCell>
+                                <TableCell align="center">{renderCell(teamData.task3)}</TableCell>
+                                <TableCell align="center">{renderCell(teamData.task4)}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </Box>
     );
 }
-
-const thStyle = {
-    border: '1px solid #ccc',
-    padding: '8px',
-    background: '#f0f0f0',
-    textAlign: 'left'
-};
-
-const tdStyle = {
-    border: '1px solid #ccc',
-    padding: '8px',
-    textAlign: 'center'
-};

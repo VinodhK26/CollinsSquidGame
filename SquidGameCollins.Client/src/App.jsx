@@ -1,15 +1,8 @@
 import React from 'react';
-import FacilitatorPanel from './FacilitatorPanel';
-import Leaderboard from './Leaderboard';
+import HomePage from './HomePage';
 
 function App() {
-    return (
-        <div className="App">
-            <h1>Squid Game Leaderboard</h1>
-            <FacilitatorPanel />
-            <Leaderboard />
-        </div>
-    );
+    return <HomePage />;
 }
 
 export default App;
